@@ -1,28 +1,5 @@
 body {
-  text-align: center;
-  background-color: rgb(233, 215, 207);
   margin: 50px;
-}
-
-h1 {
-  /* dark gray */
-  color: rgb(84, 74, 74);
-  font-family: 'Oswald', sans-serif;
-
-}
-
-p {
-  color: rgb(84, 74, 74);
-  font-family: 'Fira Sans', sans-serif;
-}
-
-a {
-  text-decoration: none;
-  color: #c02;
-}
-
-a:hover {
-  text-decoration: underline;
 }
 
 img {
