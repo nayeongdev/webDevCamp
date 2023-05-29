@@ -1,15 +1,39 @@
-body {
-  margin: 50px;
+main {
+  width: 800px;
+  margin: 160px auto 60px;
+  background: rgba(219, 108, 94);
+  padding: 24px;
+  border: 5px solid rgb(44, 44, 44);
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, .3);
 }
 
 img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+  /* main 요소의 윗부분 padding+border는 약 29픽셀
+  이미지 요소의 높이는 약 210픽셀 /2 = 105픽셀
+  가운데에 위치 하려면 -134픽셀 */
+  margin: -134px auto 0;
+  border: 5px solid rgb(44, 44, 44);
+}
+
+h1 {
+  font-style: 30px;
+  color: rgb(31, 25, 25);
+}
+
+a {
+  color: rgb(73, 29, 50);
+}
+
+span {
+  color: rgb(66, 2, 2);
 }
 
 #todays-challenge {
-  color: rgb(170, 96, 83);
+  color: rgb(75, 59, 59);
   font-weight: bold;
   font-size: 52px;
 }
