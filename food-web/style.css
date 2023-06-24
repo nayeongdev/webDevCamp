@@ -30,19 +30,19 @@ ul {
   text-transform: uppercase;
 }
 
-nav ul {
+#main-header nav ul {
   margin: 0;
   display: flex;
   gap: 1rem;
 }
 
-nav a {
+#main-header nav a {
   color: rgb(185, 131, 31);
   font-size: 1.25rem;
   text-transform: capitalize;
 }
 
-nav a:hover {
+#main-header nav a:hover {
   color: rgb(228, 163, 44);
 }
 
@@ -90,4 +90,18 @@ button {
 
 button:hover {
   background-color: rgb(221, 134, 34);
+}
+
+@media (max-width: 48rem) {
+  #main-header nav {
+    display: none;
+  }
+
+  main h1 {
+    font-size: 1.5rem;
+  }
+
+  #latest-products ul {
+    grid-template-columns: 100%;
+  }
 }
