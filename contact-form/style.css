@@ -1,0 +1,97 @@
+body {
+  font-family: "Kanit", "Noto Sans KR", sans-serif;
+  background-color: #eefafd;
+}
+
+h1 {
+  text-align: center;
+  margin: 2rem;
+}
+
+form {
+  width: 800px;
+  margin: auto;
+  background-color: #fbfcff;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+section {
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+  margin: 0;
+  border: 1px solid #d8e2ff;
+  border-radius: 6px;
+  padding: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus,
+select:focus-visible {
+  background-color: #97bcf362;
+  outline-color: #3c8aff62;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #00002ea8;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#form-actions{
+  text-align: right;
+}
+
+.btn-empty {
+  color: #00002e;
+  background-color: transparent;
+}
+.btn-empty:hover {
+  background-color: #00002e1a;
+}
+
+.btn-filled {
+  color: #f8f8ff;
+  background-color: #00002e;
+}
+.btn-filled:hover {
+  background-color: #00002ec5;
+}
+
+.inline-control {
+  display: flex;
+}
+
+.inline-control label {
+  margin: 0;
+  margin-left: 0.5rem;
+}
+
+.inline-control input {
+  width: auto;
+}
