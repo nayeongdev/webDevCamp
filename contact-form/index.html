@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연락처 양식</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 lang="en">Contact Us</h1>
+    <form action="/contact-form" method="get">
+      <section>
+        <h2>무엇을 도와드릴까요?</h2>
+        <ul>
+          <li>
+            <label for="name">이름</label>
+            <input type="text" name="name" id="name" required />
+          </li>
+          <li>
+            <label for="email">이메일 주소</label>
+            <input type="email" name="email" id="email" required />
+          </li>
+          <li>
+            <label for="number">휴대폰 번호</label>
+            <input type="tel" name="phone" id="phone" required minlength="5" />
+          </li>
+          <li>
+            <label for="message">메시지</label>
+            <textarea
+              name="message"
+              id="message"
+              required
+              minlength="5"
+              maxlength="200"
+              rows="6"
+            ></textarea>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <label for="channel">알게된 경로</label>
+        <select name="channel" id="channel">
+          <option value="웹검색">웹 검색</option>
+          <option value="SNS">SNS(Facebook, Instagram, ..)</option>
+          <option value="지인소개">지인 소개</option>
+        </select>
+      </section>
+      <section>
+        <h2>연락 받을 방법을 선택하세요</h2>
+        <ul>
+          <li class="inline-control">
+            <input
+              type="radio"
+              name="reply"
+              id="phone"
+              value="전화"
+              checked
+              required
+            />
+            <label for="phone">전화로 수신</label>
+          </li>
+          <li class="inline-control">
+            <input
+              type="radio"
+              name="reply"
+              id="email"
+              value="이메일"
+              required
+            />
+            <label for="email">이메일로 수신</label>
+          </li>
+          <li class="inline-control">
+            <input
+              type="radio"
+              name="reply"
+              id="reply-none"
+              value="필요없음"
+              required
+            />
+            <label for="reply-none">연락 필요 없음</label>
+          </li>
+        </ul>
+      </section>
+      <section class="inline-control">
+        <input type="checkbox" name="accept-terms" id="accept-terms" required />
+        <label for="accept-terms">모든 정보 수집에 동의합니다.</label>
+      </section>
+      <section id="form-actions">
+        <button type="reset" class="btn-empty">초기화</button>
+        <button type="submit" class="btn-filled">제출</button>
+      </section>
+    </form>
+  </body>
+</html>
