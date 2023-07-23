@@ -1,25 +1,33 @@
-let productNameInputElement = document.body.querySelector('input');
-let remainingCharsElement = document.getElementById('remaining-chars');
-let maxAllowedChars = productNameInputElement.maxLength;
+const productNameInputElement = document.body.querySelector('input');
+const remainingCharsElement = document.getElementById('remaining-chars');
+const maxAllowedChars = productNameInputElement.maxLength;
 
-function warningStatus(n) {
+function remainingStatus(n) {
+  if (n === 0) {
+    productNameInputElement.classList.add('error');
+    remainingCharsElement.classList.add('error');
+    return;
+  }
   if (n <= 10) {
     productNameInputElement.classList.add('warning');
     remainingCharsElement.classList.add('warning');
+    productNameInputElement.classList.remove('error');
+    remainingCharsElement.classList.remove('error');
     return;
   }
-
   productNameInputElement.classList.remove('warning');
   remainingCharsElement.classList.remove('warning');
 }
 
 function updateRemainingChars(e) {
-  let enteredTxt = e.target.value;
-  let enteredTxtLen = enteredTxt.length;
-  let remainingChars = maxAllowedChars - enteredTxtLen;
+  const enteredTxt = e.target.value;
+  const enteredTxtLength = enteredTxt.length;
+  const remainingChars = maxAllowedChars - enteredTxtLength;
 
-  remainingCharsElement.innerText = remainingChars;
-  warningStatus(remainingChars);
+  if (remainingChars > -1) {
+    remainingCharsElement.innerText = remainingChars;
+    remainingStatus(remainingChars);
+  }
 }
 
 
