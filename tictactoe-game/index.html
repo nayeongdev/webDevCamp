@@ -9,10 +9,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/overlay.css">
   <link rel="stylesheet" href="styles/configuration.css">
 </head>
 
 <body>
+  <div id="backdrop"></div>
   <!-- header -->
   <header id="main-header">
     <h1>Play Tic, Tac, Toe</h1>
@@ -40,6 +42,20 @@
         </li>
       </ol>
       <button class="btn" id="start-btn">Start New Game</button>
+      <!-- overlay -->
+      <aside class="modal" id="config-overlay">
+        <h2>Choose your name</h2>
+        <form>
+          <div class="form-control">
+            <label for="player-name">Player name</label>
+            <input type="text" name="playername" id="player-name">
+          </div>
+          <div>
+            <button type="button" class="btn btn-alt">Cancel</button>
+            <button type="submit" class="btn">Confirm</button>
+          </div>
+        </form>
+      </aside>
     </section>
 
     <section id="active-game">
