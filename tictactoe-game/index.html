@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/configuration.css">
+</head>
+
+<body>
+  <!-- header -->
+  <header id="main-header">
+    <h1>Play Tic, Tac, Toe</h1>
+    <p>Bulit with HTML, CSS, JavaScript and of course lots of love!</p>
+  </header>
+  <!-- main -->
+  <main>
+    <section id="game-configuration">
+      <ol>
+        <li>
+          <article>
+            <h2>Player 1</h2>
+            <h3>PLAYER NAME</h3>
+            <p class="player-symbol">X</p>
+            <button class="btn btn-alt">Edit</button>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h2>Player 2</h2>
+            <h3>PLAYER NAME</h3>
+            <p class="player-symbol">O</p>
+            <button class="btn btn-alt">Edit</button>
+          </article>
+        </li>
+      </ol>
+      <button class="btn" id="start-btn">Start New Game</button>
+    </section>
+
+    <section id="active-game">
+      <article>
+        <h3>You won, <span id="winner-name">PLAYER NAME</span>!</h3>
+        <P>Click "Start New Game" above, to start a new game!</P>
+      </article>
+      <p>It's your turn <span id="active-player-name">PLAYER NAME</span>!</p>
+      <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+
+        <li></li>
+        <li></li>
+        <li></li>
+
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+    </section>
+  </main>
+</body>
+
+</html>
