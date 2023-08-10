@@ -1,4 +1,17 @@
 // 여러가지를 초기화시키는 가장 먼저 실행되어야 하는 파일
+let editedPlayer = 0;
+
+const players = [
+  {
+    name: '',
+    Symbol: 'X'
+  },
+  {
+    name: '',
+    Symbol: 'O'
+  },
+];
+
 const palyerConfigOverlayElement = document.getElementById('config-overlay');
 const backdropElement = document.getElementById('backdrop');
 const formElement = document.querySelector('form');
