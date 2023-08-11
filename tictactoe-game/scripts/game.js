@@ -17,10 +17,25 @@ function switchPlayer() {
 }
 
 function selectGameField(event) {
-  if (event.target.tagName !== "LI") {
+  const selectedField = event.target;
+  
+  if (selectedField.tagName !== "LI") {
     return;
   }
-  event.target.textContent = players[activePlayer].symbol;
-  event.target.classList.add('disabled');
+
+  const selectedColumn = selectedField.dataset.col - 1;
+  const selectedRow = selectedField.dataset.row - 1;
+
+  if (gameData[selectedRow][selectedColumn] > 0) {
+    alert('Please Select an empty field!')
+    return;
+  }
+
+  selectedField.textContent = players[activePlayer].symbol;
+  selectedField.classList.add('disabled');
+
+  gameData[selectedRow][selectedColumn] = activePlayer + 1;
+  console.log(gameData);
+
   switchPlayer();
 }
