@@ -5,7 +5,7 @@ const express = require('express');
 
 const app = express();
 
-app.set('views', path.join(__dirname,'views'))
+app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
 app.use(express.static('public'));
@@ -16,7 +16,12 @@ app.get('/', function (req, res) {
 });  // localhost:3000/
 
 app.get('/restaurants', function (req, res) {
-  res.render('restaurants');
+  const filePath = path.join(__dirname, 'data', 'restuarant.json')
+
+  const fileData = fs.readFileSync(filePath);
+  const storedRestaurants = JSON.parse(fileData);
+
+  res.render('restaurants', { numberOfRestaurants: storedRestaurants.length });
 });  // localhost:3000/resturants
 
 app.get('/recommend', function (req, res) {
@@ -26,7 +31,7 @@ app.get('/recommend', function (req, res) {
 app.post('/recommend', function (req, res) {
   const restaurant = req.body;
   const filePath = path.join(__dirname, 'data', 'restuarant.json')
-  
+
   const fileData = fs.readFileSync(filePath);
   const storedRestaurants = JSON.parse(fileData);
 
