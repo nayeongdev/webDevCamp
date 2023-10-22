@@ -26,9 +26,18 @@ app.get('/restaurants', function (req, res) {
 });  // localhost:3000/resturants
 
 app.get('/restaurants/:id', function (req, res) {
-  const restaurantId = req.params.id
-  res.render('restaurants-detail', { rid: restaurantId })
-})
+  const restaurantId = req.params.id;
+  const filePath = path.join(__dirname, 'data', 'restuarant.json')
+
+  const fileData = fs.readFileSync(filePath);
+  const storedRestaurants = JSON.parse(fileData);
+
+  for (const restaurant of storedRestaurants) {
+    if (restaurant.id === restaurantId) {
+      return res.render('restaurants-detail', { restaurant: restaurant });
+    }
+  }
+});
 
 app.get('/recommend', function (req, res) {
   res.render('recommend');
