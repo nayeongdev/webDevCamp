@@ -35,7 +35,7 @@ router.post('/recommend', function (req, res) {
 
   restaurants.push(restaurant);
 
-  resData.storeRestaurants(restaurants)
+  resData.storeRestaurant(restaurants)
 
   res.redirect('/confirm');
 })

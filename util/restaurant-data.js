@@ -11,12 +11,12 @@ function getStoredRestaurants(params) {
   return storedRestaurants
 }
 
-function storeRestaurants(storableRestaurants) {
+function storeRestaurant(storableRestaurants) {
   fs.writeFileSync(filePath, JSON.stringify(storableRestaurants));
 }
 
 module.exports = {
   getStoredRestaurants: getStoredRestaurants,
-  storedRestaurants: storeRestaurants,
+  storeRestaurant: storeRestaurant,
 }
 // {이름바꿔도됨:위에함수이름}
